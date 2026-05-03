@@ -1,7 +1,8 @@
 import { Toaster } from "sonner";
 import { Route, Switch } from "wouter";
 import React from "react";
-import ErrorBoundary from "./components/ErrorBoundary";
+
+import ErrorBoundary from "./components/ErrorBoundary"; 
 import Home from "./pages/Home";
 import Onboarding from "./pages/Onboarding";
 import Dashboard from "./pages/Dashboard";
