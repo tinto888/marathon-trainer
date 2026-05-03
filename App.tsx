@@ -2,19 +2,19 @@ import { Toaster } from "sonner";
 import { Route, Switch } from "wouter";
 import React from "react";
 
-import ErrorBoundary from "./components/ErrorBoundary"; 
-import Home from "./pages/Home";
-import Onboarding from "./pages/Onboarding";
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
-import Workouts from "./pages/Workouts";
-import Races from "./pages/Races";
-import Social from "./pages/Social";
-import TrainingPlan from "./pages/TrainingPlan";
-import AICoach from "./pages/AICoach";
-import WorkoutDetail from "./pages/WorkoutDetail";
-import Compare from "./pages/Compare";
-import DashboardLayout from "./components/DashboardLayout";
+import ErrorBoundary from "@/components/ErrorBoundary"; 
+import Home from "@/pages/Home";
+import Onboarding from "@/pages/Onboarding";
+import Dashboard from "@/pages/Dashboard";
+import Profile from "@/pages/Profile";
+import Workouts from "@/pages/Workouts";
+import Races from "@/pages/Races";
+import Social from "@/pages/Social";
+import TrainingPlan from "@/pages/TrainingPlan";
+import AICoach from "@/pages/AICoach";
+import WorkoutDetail from "@/pages/WorkoutDetail";
+import Compare from "@/pages/Compare";
+import DashboardLayout from "@/components/DashboardLayout";
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   return <DashboardLayout>{children}</DashboardLayout>;
