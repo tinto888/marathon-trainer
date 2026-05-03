@@ -29,8 +29,6 @@ import {
   LayoutDashboard,
   LogOut,
   PanelLeft,
-  Trophy,
-  Users,
   User,
 } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
@@ -45,7 +43,6 @@ const menuItems = [
   { icon: Dumbbell, label: "운동 기록", path: "/workouts" },
   { icon: BarChart3, label: "훈련 계획", path: "/training-plan" },
   { icon: Calendar, label: "대회 일정", path: "/races" },
-  { icon: Users, label: "소셜 비교", path: "/social" },
   { icon: Bot, label: "AI 코치", path: "/ai-coach" },
   { icon: User, label: "내 프로필", path: "/profile" },
 ];
@@ -260,7 +257,5 @@ function DashboardLayoutContent({
         <BottomNav />
       </SidebarInset>
     </>
-  );
-}
   );
 }
