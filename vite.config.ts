@@ -1,16 +1,26 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
-  root: "./", 
+  root: './',
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./"),
+      '@': path.resolve(__dirname, './'),
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [tailwindcss(), autoprefixer()],
     },
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
   },
-});
+})
