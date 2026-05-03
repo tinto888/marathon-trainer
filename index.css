@@ -1,11 +1,10 @@
-/* v3 표준 방식으로 변경하여 빌드 에러를 해결합니다 */
+/* Tailwind v3 전용 지시어로 교체 (에러 해결 핵심) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* 변수 및 테마 설정 */
 :root {
   --radius: 0.5rem;
   --background: oklch(0.98 0.005 220);
@@ -77,12 +76,6 @@
     @apply bg-background text-foreground;
     font-family: 'Space Grotesk', sans-serif;
   }
-  code, pre, .mono {
-    font-family: 'Space Mono', monospace;
-  }
-  button:not(:disabled), a[href] {
-    @apply cursor-pointer;
-  }
 }
 
 @layer components {
@@ -90,59 +83,13 @@
     background-color: var(--background);
     background-image:
       linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
-      linear-gradient(var(--grid-accent) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-accent) 1px, transparent 1px);
-    background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
-  }
-  .mono-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: oklch(0.5 0.02 220);
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 20px 20px, 20px 20px;
   }
   .blueprint-card {
     background: white;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     position: relative;
-    overflow: hidden;
-  }
-  .blueprint-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--cyan), var(--pink));
-  }
-  .stat-value {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1;
-  }
-  
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1280px;
-    }
   }
 }
