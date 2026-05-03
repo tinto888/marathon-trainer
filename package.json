@@ -14,7 +14,7 @@
     "wouter": "^3.3.5",
     "lucide-react": "^0.453.0",
     "clsx": "^2.1.1",
-    "tailmerge": "^1.0.0",
+    "tailwind-merge": "^2.5.0",
     "sonner": "^1.5.0"
   },
   "devDependencies": {
