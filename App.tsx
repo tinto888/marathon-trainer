@@ -2,19 +2,20 @@ import { Toaster } from "sonner";
 import { Route, Switch } from "wouter";
 import React from "react";
 
-import ErrorBoundary from "@/components/ErrorBoundary"; 
-import Home from "@/pages/Home";
-import Onboarding from "@/pages/Onboarding";
-import Dashboard from "@/pages/Dashboard";
-import Profile from "@/pages/Profile";
-import Workouts from "@/pages/Workouts";
-import Races from "@/pages/Races";
-import Social from "@/pages/Social";
-import TrainingPlan from "@/pages/TrainingPlan";
-import AICoach from "@/pages/AICoach";
-import WorkoutDetail from "@/pages/WorkoutDetail";
-import Compare from "@/pages/Compare";
-import DashboardLayout from "@/components/DashboardLayout";
+// 확장자 .tsx를 명시하여 경로를 더 확실히 잡아줍니다.
+import ErrorBoundary from "./components/ErrorBoundary.tsx"; 
+import Home from "./pages/Home.tsx";
+import Onboarding from "./pages/Onboarding.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
+import Profile from "./pages/Profile.tsx";
+import Workouts from "./pages/Workouts.tsx";
+import Races from "./pages/Races.tsx";
+import Social from "./pages/Social.tsx";
+import TrainingPlan from "./pages/TrainingPlan.tsx";
+import AICoach from "./pages/AICoach.tsx";
+import WorkoutDetail from "./pages/WorkoutDetail.tsx";
+import Compare from "./pages/Compare.tsx";
+import DashboardLayout from "./components/DashboardLayout.tsx";
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   return <DashboardLayout>{children}</DashboardLayout>;
