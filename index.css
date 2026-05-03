@@ -1,3 +1,4 @@
+/* Tailwind v3 표준 지시어 (에러 해결의 핵심) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,9 +75,6 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Space Grotesk', sans-serif;
-  }
-  code, pre, .mono {
-    font-family: 'Space Mono', monospace;
   }
 }
 
